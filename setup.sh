@@ -12,7 +12,6 @@ dirs=(~/.ssh
 apt_apps=(git
           emacs
           tree
-          google-chrome-stable
           python-pip
           python-dev
          )
