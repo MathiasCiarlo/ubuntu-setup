@@ -46,7 +46,7 @@ echo "Installing apps ..."
 sudo apt-get install -y ${apt_apps[@]}
 
 # Config files
-if [ ! -d "~/dev/dotfiles" ]; then
+if [ ! -d $HOME/dev/dotfiles ]; then
     echo "Cloning config files ..."
     git clone --recursive https://github.com/MathiasCiarlo/dotfiles.git ~/dev/dotfiles
 fi
@@ -60,7 +60,7 @@ echo "Installing @ ..."
 sudo pip install paramiko
 
 # Devilry mode
-if [ ! -d "~/.emacs.d/plugins/devilry-mode" ]; then
+if [ ! -d $HOME.emacs.d/plugins/devilry-mode ]; then
     echo "Installing Devilry mode ..."
     git clone https://github.com/MathiasCiarlo/devilry-mode.git ~/.emacs.d/plugins/devilry-mode
 fi
