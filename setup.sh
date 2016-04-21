@@ -42,10 +42,10 @@ done
 
 # Install apt apps
 echo "Updating ubuntu ..."
-sudo apt-get update
+#sudo apt-get update
 
 echo "Installing apps ..."
-sudo apt-get install -y ${apt_apps[@]}
+#sudo apt-get install -y ${apt_apps[@]}
 
 # Config files
 if [ ! -d $HOME/dev/dotfiles ]; then
