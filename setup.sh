@@ -74,4 +74,4 @@ done
 
 # Load aliases
 echo "Loading aliases"
-. ~/dotfiles/.bash_aliases
+. ~/dev/dotfiles/.bash_aliases
