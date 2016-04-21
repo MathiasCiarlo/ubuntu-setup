@@ -23,10 +23,10 @@ repos=(
 )
 
 # Symbolic links
-symlinks=("~/dev/dotfiles/emacs/.emacs ~/.emacs"
-          "~/dev/dotfiles/.bash_aliases ~/.bash_aliases"
-          "~/dev/dotfiles/.ssh/config ~/.ssh/config"
-          "~/dev/dotfiles/.config/autostart/gnome-terminal.desktop ~/.config/autostart/gnome-terminal.desktop"
+symlinks=("$HOME/dev/dotfiles/emacs/.emacs $HOME/.emacs"
+          "$HOME/dev/dotfiles/.bash_aliases $HOME/.bash_aliases"
+          "$HOME/dev/dotfiles/.ssh/config $HOME/.ssh/config"
+          "$HOME/dev/dotfiles/.config/autostart/gnome-terminal.desktop $HOME/.config/autostart/gnome-terminal.desktop"
          )
 
 
@@ -42,10 +42,10 @@ done
 
 # Install apt apps
 echo "Updating ubuntu ..."
-#sudo apt-get update
+sudo apt-get update
 
 echo "Installing apps ..."
-#sudo apt-get install -y ${apt_apps[@]}
+sudo apt-get install -y ${apt_apps[@]}
 
 # Config files
 if [ ! -d $HOME/dev/dotfiles ]; then
@@ -71,7 +71,7 @@ fi
 echo "Creating symbolic links ..."
 for ((i = 0; i < ${#symlinks[@]}; i++))
 do
-    ln -s ${symlinks[$i]}
+    ln -fs ${symlinks[$i]}
     echo "Created symlink " ${symlinks[$i]}
 done
 
