@@ -48,7 +48,7 @@ apt-get install -y ${apt_apps[@]}
 
 # Config files
 echo "Cloning config files ..."
-git clone git@github.com:MathiasCiarlo/dotfiles.git ~/dev/dotfiles
+git clone https://github.com/MathiasCiarlo/dotfiles.git ~/dev/dotfiles
 
 # Install other stuff
 echo "Installing fuck ..."
@@ -60,7 +60,7 @@ pip install paramiko
 
 # Devilry mode
 echo "Installing Devilry mode ..."
-git clone git@github.com:MathiasCiarlo/devilry-mode.git ~/.emacs.d/plugins/devilry-mode
+git clone https://github.com/MathiasCiarlo/devilry-mode.git ~/.emacs.d/plugins/devilry-mode
 
 # Symbolic links
 echo "Creating symbolic links ..."
