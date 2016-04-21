@@ -4,7 +4,7 @@
 dirs=(~/.ssh
       ~/.config/autostart
       ~/.emacs.d/plugins
-      ~/dev/dotfiles
+      ~/dev
       ~/kurs
      )
 
