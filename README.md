@@ -6,6 +6,10 @@ Tested on Ubuntu 16.04
 Installs must-have apps and fixes some folder structures and aliases.
 
 ## Installation:
-`wget -O - https://github.com/MathiasCiarlo/ubuntu-setup.git | bash`
+```bash
+wget -O - https://github.com/MathiasCiarlo/ubuntu-setup.git | bash
+```
 or
-`git clone https://github.com/MathiasCiarlo/ubuntu-setup.git && bash ubuntu-setup/setup.sh`
+```bash
+git clone https://github.com/MathiasCiarlo/ubuntu-setup.git && bash ubuntu-setup/setup.sh
+```
