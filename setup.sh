@@ -22,13 +22,6 @@ apt_apps=(emacs
 repos=(
 )
 
-# Symbolic links
-symlinks=("$HOME/dev/dotfiles/emacs/.emacs $HOME/.emacs"
-          "$HOME/dev/dotfiles/.bash_aliases $HOME/.bash_aliases"
-          "$HOME/dev/dotfiles/.ssh/config $HOME/.ssh/config"
-          "$HOME/dev/dotfiles/.config/autostart/gnome-terminal.desktop $HOME/.config/autostart/gnome-terminal.desktop"
-         )
-
 
 # Setting up folder structure
 for dir in ${dirs[*]}
@@ -45,7 +38,7 @@ echo "Updating ubuntu ..."
 sudo apt-get update
 
 echo "Installing apps ..."
-sudo apt-get install -y ${apt_apps[@]}
+sudo apt-get install -y ${apt_apps[*]}
 
 # Config files
 if [ ! -d $HOME/dev/dotfiles ]; then
@@ -68,8 +61,15 @@ if [ ! -d $HOME/.emacs.d/plugins/devilry-mode ]; then
 fi
 
 # Symbolic links
+symlinks=("$HOME/dev/dotfiles/emacs/.emacs $HOME/.emacs"
+          "$HOME/dev/dotfiles/.bash_aliases $HOME/.bash_aliases"
+          "$HOME/dev/dotfiles/.ssh/config $HOME/.ssh/config"
+          "$HOME/dev/dotfiles/.config/autostart/gnome-terminal.desktop $HOME/.config/autostart/gnome-terminal.desktop"
+         )
+
+# Symbolic links
 echo "Creating symbolic links ..."
-for ((i = 0; i < ${#symlinks[@]}; i++))
+for ((i = 0; i < ${#symlinks[*]}; i++))
 do
     ln -fs ${symlinks[$i]}
     echo "Created symlink " ${symlinks[$i]}
