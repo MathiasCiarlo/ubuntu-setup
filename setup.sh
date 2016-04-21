@@ -9,11 +9,13 @@ dirs=(~/.ssh
      )
 
 # Apt-get apps
-apt_apps=(git
-          emacs
+apt_apps=(emacs
+          curl
+          git
           tree
           python-pip
           python-dev
+          wget
          )
 
 # Other repositories, formatted as ssh-link, folder
