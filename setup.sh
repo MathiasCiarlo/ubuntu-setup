@@ -40,10 +40,10 @@ done
 
 # Install apt apps
 echo "Updating ubuntu ..."
-apt-get update
+sudo apt-get update
 
 echo "Installing apps ..."
-apt-get install -y ${apt_apps[@]}
+sudo apt-get install -y ${apt_apps[@]}
 
 # Config files
 if [ ! -d "~/dev/dotfiles" ]; then
@@ -57,7 +57,7 @@ wget -O - https://raw.githubusercontent.com/nvbn/thefuck/master/install.sh | sh 
 
 # @
 echo "Installing @ ..."
-pip install paramiko
+sudo pip install paramiko
 
 # Devilry mode
 if [ ! -d "~/.emacs.d/plugins/devilry-mode" ]; then
@@ -72,4 +72,6 @@ do
     ln -fs $symlink
 done
 
-source ~/.bashrc
+# Load aliases
+echo "Loading aliases"
+. ~/dotfiles/.bash_aliases
