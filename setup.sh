@@ -69,7 +69,10 @@ fi
 echo "Creating symbolic links ..."
 for symlink in $symlinks
 do
-    ln -fs $symlink
+    if [ ! -f "$symlink" ]; then
+        ln -s $symlink
+        echo "Created symlink $symlink"
+    fi
 done
 
 # Load aliases
