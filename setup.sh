@@ -47,8 +47,10 @@ echo "Installing apps ..."
 apt-get install -y ${apt_apps[@]}
 
 # Config files
-echo "Cloning config files ..."
-git clone --recursive https://github.com/MathiasCiarlo/dotfiles.git ~/dev/dotfiles
+if [ ! -d "~/dev/dotfiles" ]; then
+    echo "Cloning config files ..."
+    git clone --recursive https://github.com/MathiasCiarlo/dotfiles.git ~/dev/dotfiles
+fi
 
 # Install other stuff
 echo "Installing fuck ..."
@@ -59,8 +61,10 @@ echo "Installing @ ..."
 pip install paramiko
 
 # Devilry mode
-echo "Installing Devilry mode ..."
-git clone https://github.com/MathiasCiarlo/devilry-mode.git ~/.emacs.d/plugins/devilry-mode
+if [ ! -d "~/.emacs.d/plugins/devilry-mode" ]; then
+    echo "Installing Devilry mode ..."
+    git clone https://github.com/MathiasCiarlo/devilry-mode.git ~/.emacs.d/plugins/devilry-mode
+fi
 
 # Symbolic links
 echo "Creating symbolic links ..."
