@@ -48,7 +48,7 @@ apt-get install -y ${apt_apps[@]}
 
 # Config files
 echo "Cloning config files ..."
-git clone https://github.com/MathiasCiarlo/dotfiles.git ~/dev/dotfiles
+git clone --recursive https://github.com/MathiasCiarlo/dotfiles.git ~/dev/dotfiles
 
 # Install other stuff
 echo "Installing fuck ..."
