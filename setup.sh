@@ -67,10 +67,10 @@ fi
 
 # Symbolic links
 echo "Creating symbolic links ..."
-for symlink in ${symlinks[*]}
+for ((i = 0; i < ${#symlinks[@]}; i++))
 do
-    ln -s $symlink
-    echo "Created symlink $symlink"
+    ln -s ${symlinks[$i]}
+    echo "Created symlink " ${symlinks[$i]}
 done
 
 # Load aliases
