@@ -22,13 +22,6 @@ apt_apps=(emacs
 repos=(
 )
 
-# Symbolic links
-symlinks=("$HOME/dev/dotfiles/emacs/.emacs $HOME/.emacs"
-          "$HOME/dev/dotfiles/.bash_aliases $HOME/.bash_aliases"
-          "$HOME/dev/dotfiles/.ssh/config $HOME/.ssh/config"
-          "$HOME/dev/dotfiles/.config/autostart/gnome-terminal.desktop $HOME/.config/autostart/gnome-terminal.desktop"
-         )
-
 # Setting up folder structure
 for dir in ${dirs[*]}
 do
@@ -67,6 +60,12 @@ if [ ! -d $HOME/.emacs.d/plugins/devilry-mode ]; then
 fi
 
 # Symbolic links
+symlinks=("$HOME/dev/dotfiles/emacs/.emacs $HOME/.emacs"
+          "$HOME/dev/dotfiles/.bash_aliases $HOME/.bash_aliases"
+          "$HOME/dev/dotfiles/.ssh/config $HOME/.ssh/config"
+          "$HOME/dev/dotfiles/.config/autostart/gnome-terminal.desktop $HOME/.config/autostart/gnome-terminal.desktop"
+         )
+
 echo "Creating symbolic links ..."
 for ((i = 0; i < ${#symlinks[*]}; i++))
 do
