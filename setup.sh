@@ -67,7 +67,7 @@ fi
 
 # Symbolic links
 echo "Creating symbolic links ..."
-for symlink in $symlinks
+for symlink in ${symlinks[*]}
 do
     if [ ! -f "$symlink" ]; then
         ln -s $symlink
