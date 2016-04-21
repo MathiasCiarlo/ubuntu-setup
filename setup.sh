@@ -19,7 +19,7 @@ apt_apps=(git
 
 # Other repositories, formatted as ssh-link, folder
 repos=(
-      )
+)
 
 # Symbolic links
 symlinks=("~/dev/dotfiles/emacs/.emacs ~/.emacs"
@@ -33,7 +33,7 @@ symlinks=("~/dev/dotfiles/emacs/.emacs ~/.emacs"
 for dir in ${dirs[*]}
 do
     if [ ! -d "$dir" ]; then
-        mkdir $dir
+        mkdir -p $dir
         echo "Created $dir"
     fi
 done
