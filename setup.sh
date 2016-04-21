@@ -40,9 +40,14 @@ done
 
 
 # Install apt apps
-apt-get update && apt-get install -y ${apt_apps[@]}
+echo "Updating ubuntu ..."
+apt-get update
+
+echo "Installing apps ..."
+apt-get install -y ${apt_apps[@]}
 
 # Config files
+echo "Cloning config files ..."
 git clone git@github.com:MathiasCiarlo/dotfiles.git ~/dev/dotfiles
 
 # Install other stuff
@@ -63,3 +68,5 @@ for symlink in $symlinks
 do
     ln -fs $symlink
 done
+
+source ~/.bashrc
