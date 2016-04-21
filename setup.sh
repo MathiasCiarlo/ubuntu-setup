@@ -60,7 +60,7 @@ echo "Installing @ ..."
 sudo pip install paramiko
 
 # Devilry mode
-if [ ! -d $HOME.emacs.d/plugins/devilry-mode ]; then
+if [ ! -d $HOME/.emacs.d/plugins/devilry-mode ]; then
     echo "Installing Devilry mode ..."
     git clone https://github.com/MathiasCiarlo/devilry-mode.git ~/.emacs.d/plugins/devilry-mode
 fi
