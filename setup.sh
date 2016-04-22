@@ -4,6 +4,7 @@
 dirs=(~/.ssh
       ~/.config/autostart
       ~/.emacs.d/plugins
+      ~/apps
       ~/dev
      )
 
@@ -51,6 +52,7 @@ wget -O - https://raw.githubusercontent.com/nvbn/thefuck/master/install.sh | sh 
 # @
 echo "Installing @ ..."
 sudo pip install paramiko
+git clone https://github.com/larstvei/at.git ~/apps/at
 
 # Devilry mode
 if [ ! -d $HOME/.emacs.d/plugins/devilry-mode ]; then
