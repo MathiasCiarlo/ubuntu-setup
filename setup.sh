@@ -59,10 +59,10 @@ if [ ! -d $HOME/.emacs.d/plugins/devilry-mode ]; then
 fi
 
 # Symbolic links
-symlinks=("~/dev/dotfiles/emacs/.emacs ~/.emacs"
-          "~/dev/dotfiles/.bash_aliases ~/.bash_aliases"
-          "~/dev/dotfiles/.ssh/config ~/.ssh/config"
-          "~/dev/dotfiles/.config/autostart/gnome-terminal.desktop ~/.config/autostart/gnome-terminal.desktop"
+symlinks=("$HOME/dev/dotfiles/emacs/.emacs $HOME/.emacs"
+          "$HOME/dev/dotfiles/.bash_aliases $HOME/.bash_aliases"
+          "$HOME/dev/dotfiles/.ssh/config $HOME/.ssh/config"
+          "$HOME/dev/dotfiles/.config/autostart/gnome-terminal.desktop $HOME/.config/autostart/gnome-terminal.desktop"
          )
 
 echo "Creating symbolic links ..."
