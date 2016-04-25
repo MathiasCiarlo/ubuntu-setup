@@ -79,4 +79,7 @@ echo "Loading aliases"
 . ~/dev/dotfiles/.bash_aliases
 
 # Change Caps lock to Ctrl
-echo "XKBOPTIONS=\"ctrl:nocaps\" >> /etc/default/keyboard
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
+
+# Git setup
+export EDITOR="emacs -nw"
