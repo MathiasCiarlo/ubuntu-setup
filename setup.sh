@@ -18,7 +18,7 @@ apt_apps=(emacs
           wget
          )
 
-# Other repositories, formatted as ssh-link, folder
+# Other repositories, formatted as <git-url, folder>
 repos=(
 )
 
@@ -77,3 +77,6 @@ done
 # Load aliases
 echo "Loading aliases"
 . ~/dev/dotfiles/.bash_aliases
+
+# Change Caps lock to Ctrl
+echo "XKBOPTIONS=\"ctrl:nocaps\" >> /etc/default/keyboard
