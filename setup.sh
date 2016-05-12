@@ -83,3 +83,6 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
 
 # Git setup
 export EDITOR="emacs -nw"
+
+# TODO
+## Java setup
