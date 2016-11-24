@@ -16,6 +16,7 @@ apt_apps=(emacs
           python-pip
           python-dev
           wget
+          thefuck
          )
 
 # Other repositories, formatted as <git-url, folder>
@@ -53,12 +54,6 @@ wget -O - https://raw.githubusercontent.com/nvbn/thefuck/master/install.sh | sh 
 echo "Installing @ ..."
 sudo pip install paramiko
 git clone https://github.com/larstvei/at.git ~/apps/at
-
-# Devilry mode
-if [ ! -d $HOME/.emacs.d/plugins/devilry-mode ]; then
-    echo "Installing Devilry mode ..."
-    git clone https://github.com/MathiasCiarlo/devilry-mode.git ~/.emacs.d/plugins/devilry-mode
-fi
 
 # Symbolic links
 symlinks=("$HOME/dev/dotfiles/emacs/.emacs $HOME/.emacs"
