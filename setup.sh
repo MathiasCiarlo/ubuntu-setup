@@ -6,6 +6,7 @@ dirs=(~/.ssh
       ~/.emacs.d/plugins
       ~/apps
       ~/dev
+      ~/libs
      )
 
 # Apt-get apps
